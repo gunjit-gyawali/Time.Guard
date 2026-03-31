@@ -1,0 +1,218 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 300px;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  font-size: 13px;
+  padding-bottom: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #f5a623;
+}
+
+.tagline {
+  font-size: 15px;
+  color: #8b8b8b;
+}
+
+.active-card {
+  margin: 12px 14px 0;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.active-label {
+  font-size:12px;
+  color: #ff9090;
+  margin-bottom: 4px;
+}
+
+.active-domain {
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.active-time {
+  font-size: 22px;
+  font-weight: 500;
+  color: #f5a623;
+}
+
+.history {
+  margin: 14px 14px 0;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.history-title {
+  font-size: 14px;
+  color: #c8c8c8;
+}
+
+.reset-all-btn {
+  background: none;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  color: #a8a8a8;
+  font-size: 10px;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.reset-all-btn:hover {
+  color: #e05252;
+  border-color: #e05252;
+}
+
+.domain-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.domain-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.domain-list::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 2px;
+}
+
+.domain-item {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  padding: 9px 12px;
+}
+
+.domain-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.domain-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.domain-time {
+  font-size: 11px;
+  color: #dddddd;
+}
+
+.reset-btn {
+  background: none;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  color: #e1e1e1;
+  font-size: 10px;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.reset-btn:hover {
+  color: #f5a623;
+  border-color: #f5a623;
+}
+
+.empty-state {
+  font-size: 15px;
+  color: #b8b8b8;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.confirm-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.confirm-overlay.visible {
+  display: flex;
+}
+
+.confirm-box {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.confirm-box p {
+  font-size: 13px;
+  color: #e8e8e8;
+  margin-bottom: 14px;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.confirm-actions button {
+  font-size: 11px;
+  padding: 5px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #2a2a2a;
+  background: none;
+  color: #666;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.confirm-actions #confirmYes:hover {
+  color: #e05252;
+  border-color: #e05252;
+}
+
+.confirm-actions #confirmNo:hover {
+  color: #f5a623;
+  border-color: #f5a623;
+}

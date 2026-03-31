@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TimeGuard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo-text">Time.Guard</span>
+    <span class="tagline">time tracker</span>
+  </header>
+
+  <div class="active-card">
+    <div class="active-label">you are on</div>
+    <div class="active-domain" id="activeDomain">loading...</div>
+    <div class="active-time" id="timeSpent">0 min</div>
+  </div>
+
+  <section class="history">
+    <div class="history-header">
+      <span class="history-title">all sites today</span>
+      <button class="reset-all-btn" id="resetAllBtn">clear all</button>
+    </div>
+    <ul class="domain-list" id="domainList">
+      <li class="empty-state">nothing tracked yet</li>
+    </ul>
+  </section>
+
+  <div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+      <p>are you sure?</p>
+      <div class="confirm-actions">
+        <button id="confirmYes">yes</button>
+        <button id="confirmNo">no</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
