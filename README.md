@@ -12,6 +12,7 @@ A Chrome extension that shows how much time you’re spending on websites. In sh
 2. Go to chrome://extensions
 3. Turn on Developer mode (top right)
 4. Click Load unpacked and pick the folder
+5. Every website is supported as long as it has a domain.
 
 ## How to use
 1. Click the extension icon and it’ll show your current site + how long you’ve been on it.
